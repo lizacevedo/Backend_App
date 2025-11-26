@@ -1,0 +1,10 @@
+﻿services:
+  - type: web
+    name: monitoreo-backend
+    env: java
+    plan: free
+    buildCommand: mvn clean install
+    startCommand: java -jar target/Arquitectural_monitoreo-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
